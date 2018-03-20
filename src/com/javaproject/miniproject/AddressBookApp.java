@@ -49,7 +49,7 @@ public class AddressBookApp {
                     for (int i = 0; i < list.size(); i++) {
                         System.out.println(i + 1 + ". " + list.get(i).toString());
                     }
-                    System.out.println("\n" + "\n");
+                    System.out.println("\n");
 
                     break;
 
