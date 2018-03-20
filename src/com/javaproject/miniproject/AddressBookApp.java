@@ -7,6 +7,7 @@ import java.util.Scanner;
 
 public class AddressBookApp {
     public static void main(String[] args) throws IOException {
+
         Scanner scanner = new Scanner(System.in);
         List<AddressBook> list = new ArrayList<>();
         Reader reader = new FileReader("phoneDB.txt");
@@ -23,19 +24,17 @@ public class AddressBookApp {
         System.out.println("*******************************************************" + "\n");
 
         while (true) {
-
             str = bufferedReader.readLine();
+
             if (str == null) {
                 break;
             } else {
                 String[] strArray = str.split(",");
                 AddressBook addressBook = new AddressBook(strArray[0], strArray[1], strArray[2]);
                 list.add(addressBook);
-
             }
         }
         while (run) {
-
 
             System.out.println("1.리스트  2.등록  3.삭제  4.검색  5.종료");
             System.out.println("-------------------------------------------------------");
@@ -120,7 +119,7 @@ public class AddressBookApp {
                     break;
 
                 default:
-                    System.out.println("[다시입력해주세요]" + "\n");
+                    System.out.println("\n" + "[다시입력해주세요]" + "\n");
 
                     break;
             }
