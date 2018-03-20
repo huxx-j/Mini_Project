@@ -125,6 +125,8 @@ public class AddressBookApp {
                     break;
             }
         }
+        scanner.close();
+        bufferedReader.close();
     }
 }
 
